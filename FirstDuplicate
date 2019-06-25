@@ -1,0 +1,17 @@
+function FirstDuplicate(array){
+  var arrayCopy = array.slice(1,array.length)
+  var count = array.length*2 
+  var output = -1
+  for(var i = 0; i < array.length;i++){
+    arrayCopy = array.slice(1+i,array.length);
+    for(var b = 0; b < arrayCopy.length;b++){
+      
+      if(array[i]===arrayCopy[b]){
+		var  checkNum = array.length+b
+        if(count > (checkNum)){
+			count = array.length+b;
+			output = array[i];}}
+                                            }
+                                        }
+  return output;
+}
