@@ -1,0 +1,18 @@
+function arrayMode(array){ 
+	function getValue(array, value){
+		var count=0;
+		array.forEach((v)=> (v===value && count++));
+		return count;}
+
+	var output = array[0]
+	var arrayLength = array.length
+	for (var i = 0; i < arrayLength; i++){
+	if (getValue(array,array[0]) < getValue(array,array[i])){
+		output = array[i];
+    }else 
+	{
+      continue}
+	}
+    
+	return output;
+    }
